@@ -14,8 +14,10 @@ const Hero: FC = () => {
         alt="Ethan Kramer in a suit coat at a nice restaurant"
       />
       <div className="mt-3">
-        <p className="text-xl text-zinc-600 font-bold p-3 pb-0">Ethan Kramer</p>
-        <h1 className="text-3xl md:text-4xl text-red-600 font-bold p-3">
+        <p className="text-xl text-zinc-600 font-bold p-3 pb-0 selection:bg-red-700 selection:text-white">
+          Ethan Kramer
+        </p>
+        <h1 className="text-3xl md:text-4xl text-red-600 font-bold p-3 selection:bg-red-700 selection:text-white">
           <p>
             <span aria-hidden="true">🎨</span> Pixel Pusher
           </p>
@@ -26,7 +28,7 @@ const Hero: FC = () => {
             <span aria-hidden="true">☁️</span> Cloud Enthusiast
           </p>
         </h1>
-        <p className="text-sm md:text-base text-zinc-600 pt-2 px-3 md:py-3">
+        <p className="text-sm md:text-base text-zinc-600 pt-2 px-3 md:py-3 selection:bg-red-700 selection:text-white">
           As a seasoned engineer with over ten years of experience, I thrive on
           owning every part of the system, from front-end to back-end, as well
           as the infrastructure with Terraform and Amazon Web Services (AWS). I
