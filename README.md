@@ -7,6 +7,7 @@ Repo for my personal website written with React.js 18 + TypeScript. Hosted on AW
 - Vite
 - Bun _(See https://bun.sh/ for more details, but can be _much_ faster than npm)_
 - Tailwind CSS
+  - Docs: https://tailwindcss.com/docs/installation
 - ESLint + Prettier for auto-formatting/linting
 
 Hosted with:
