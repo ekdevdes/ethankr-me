@@ -131,3 +131,6 @@ dist
 
 # macOS stuff
 .DS_Store
+
+# vite build cache
+.vite/*
