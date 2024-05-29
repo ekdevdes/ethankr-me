@@ -25,7 +25,7 @@ const Hero = () => {
         <p className="text-base text-zinc-600 pt-2 px-3 md:py-3">
           As a seasoned engineer with over ten years of experience, I thrive on
           owning every part of the system, from front-end to back-end, as well
-          as the infrastructure with Terraform and AWS (Amazon Web Services). I
+          as the infrastructure with Terraform and Amazon Web Services (AWS). I
           firmly believe that software engineering is a team sport. It's not
           only about building the most technically robust solution, but
           collaborating with a team of individuals, each highly skilled in their
