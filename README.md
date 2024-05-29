@@ -26,7 +26,7 @@ This project uses bun _(as mentioned above)_ for the speed improvements over npm
 brew tap oven-sh/bun
 ```
 
-Then install bun from homebrew after tapping `oven-sh/bun`:
+Then install bun from the homebrew reppo:
 
 ```zsh
 brew install bun
