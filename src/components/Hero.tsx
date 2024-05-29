@@ -1,17 +1,21 @@
+import { FC } from 'react'
+
+import Button from './shared/Button'
 import profilePic from '../assets/me.jpg'
 
-const Hero = () => {
+const Hero: FC = () => {
   return (
     <div>
       {/* image size can be reduced since we're only using it as a 115px image */}
       <img
         src={profilePic}
-        className="w-20 lg:w-28 rounded-full ml-3"
+        className="min-w-20 lg:min-w-28 w-20 lg:w-2 rounded-full ml-3"
+        width="125"
         alt="Ethan Kramer in a suit coat at a nice restaurant"
       />
       <div className="mt-3">
         <p className="text-xl text-zinc-600 font-bold p-3 pb-0">Ethan Kramer</p>
-        <h1 className="text-3xl md:text-4xl text-red-500 font-bold p-3">
+        <h1 className="text-3xl md:text-4xl text-red-600 font-bold p-3">
           <p>
             <span aria-hidden="true">🎨</span> Pixel Pusher
           </p>
@@ -22,7 +26,7 @@ const Hero = () => {
             <span aria-hidden="true">☁️</span> Cloud Enthusiast
           </p>
         </h1>
-        <p className="text-base text-zinc-600 pt-2 px-3 md:py-3">
+        <p className="text-sm md:text-base text-zinc-600 pt-2 px-3 md:py-3">
           As a seasoned engineer with over ten years of experience, I thrive on
           owning every part of the system, from front-end to back-end, as well
           as the infrastructure with Terraform and Amazon Web Services (AWS). I
@@ -36,33 +40,22 @@ const Hero = () => {
           memories and being present for the moments that matter.
         </p>
       </div>
-      <div className="px-3 py-4">
-        {/* Extract these to button components, with primary and secondary types the margin will have to be optional, pass in className attr */}
-        <a
-          href="#"
-          className="
-            bg-red-500 hover:bg-red-700 
-            text-white font-bold 
-            rounded-full 
-            block md:inline-block 
-            py-2 px-4 md:py-4 md:px-6 
-            mb-4 md:mr-4 md:mb-0 
-            transition-colors duration-300"
+      <div className="px-3 pt-6 md:pt-4 pb-4">
+        <Button
+          type="primary"
+          className="mb-4 md:mr-4 md:mb-0 lg:pr-10 relative group text-center md:text-left"
         >
-          See My Experience &darr;
-        </a>
-        <a
-          href="#"
-          className="
-            border border-red-500 hover:border-red-700 
-            rounded-full 
-            block md:inline-block 
-            py-2 px-4 md:py-4 md:px-6 
-            text-red-500 hover:text-red-700 
-            transition-colors duration-300"
-        >
-          Check Out My Skills
-        </a>
+          See My Experience
+          <span
+            aria-hidden="true"
+            className="ml-2 absolute top-4 transition-transform group-hover:translate-y-2 hidden lg:inline-block"
+          >
+            &darr;
+          </span>
+        </Button>
+        <Button type="secondary" className="text-center md:text-left">
+          Checkout My Skills
+        </Button>
       </div>
     </div>
   )
