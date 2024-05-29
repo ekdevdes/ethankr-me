@@ -5,7 +5,7 @@ Repo for my personal website written with React.js 18 + TypeScript. Hosted on AW
 - React 18
 - TypeScript
 - Vite
-- Bun _(See https://bun.sh/ for more details but can be _much_ faster than npm)_
+- Bun _(See https://bun.sh/ for more details, but can be _much_ faster than npm)_
 - Tailwind CSS
 - ESLint + Prettier for auto-formatting/linting
 
@@ -14,13 +14,13 @@ Hosted with:
 - AWS Route 53 as for the DNS propogation
 - AWS CloudFront for the CDN and HTTPS
 
-All setup with Terraform
+All of the above AWS services are setup with _Terraform_
 
 
 # Setup Instructions
 
 ## Installing Bun
-This project uses bun (as mentioned above) for the speed improvements over npm, so first we'll have to install it via homebrew:
+This project uses bun _(as mentioned above)_ for the speed improvements over npm, so first we'll have to tap its homebrew repo before we can install it:
 
 ```zsh
 brew tap oven-sh/bun
