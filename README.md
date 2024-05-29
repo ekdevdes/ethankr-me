@@ -1,30 +1,49 @@
-# React + TypeScript + Vite
+# ethankr.me
+Repo for my personal website written with React.js 18 + TypeScript. Hosted on AWS S3 with Route53 and CloudFront for the SSL and CDN. Setup with Terraform.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Tech Stack
+- React 18
+- TypeScript
+- Vite
+- Bun _(See https://bun.sh/ for more details but can be _much_ faster than npm)_
+- Tailwind CSS
+- ESLint + Prettier for auto-formatting/linting
 
-Currently, two official plugins are available:
+Hosted with:
+- AWS S3 as the server
+- AWS Route 53 as for the DNS propogation
+- AWS CloudFront for the CDN and HTTPS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+All setup with Terraform
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+# Setup Instructions
 
-- Configure the top-level `parserOptions` property like this:
+## Installing Bun
+This project uses bun (as mentioned above) for the speed improvements over npm, so first we'll have to install it via homebrew:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```zsh
+brew tap oven-sh/bun
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Then install bun from homebrew after tapping `oven-sh/bun`:
+
+```zsh
+brew install bun
+```
+
+## Installing Dependencies
+
+Now that Bun is installed you'll have to install the dependencies with:
+
+```zsh
+bun i
+```
+
+## Running the Dev Server
+
+Once you've installed Bun and the dependences from `package.json` then you can run the following command to start the dev server:
+
+```
+bun run dev
+```
