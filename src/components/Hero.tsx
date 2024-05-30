@@ -6,7 +6,6 @@ import profilePic from '../assets/me.jpg'
 const Hero: FC = () => {
   return (
     <div>
-      {/* image size can be reduced since we're only using it as a 115px image */}
       <img
         src={profilePic}
         className="min-w-20 lg:min-w-28 w-20 lg:w-2 rounded-full ml-3"
@@ -35,9 +34,9 @@ const Hero: FC = () => {
           firmly believe that software engineering is a team sport. It's not
           only about building the most technically robust solution, but
           collaborating with a team of individuals, each highly skilled in their
-          own areas, to craft the best solutions for customers. Because in the
-          end, the best technology isn’t just about technical excellence — it’s
-          about creating something that seamlessly enhances people’s lives,
+          own areas, to craft the best solutions for customers. After all, in
+          the end, the best technology isn’t just about technical excellence —
+          it’s about creating something that seamlessly enhances people’s lives,
           allowing them to focus on what truly matters: living life, making
           memories and being present for the moments that matter.
         </p>
