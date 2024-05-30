@@ -32,6 +32,7 @@ const Button: FC<ButtonProps> = ({ children, type, className = '' }) => {
           rounded-full 
           block md:inline-block 
           py-2 px-4 md:py-4 md:px-6
+          text-center md:text-left
           transition-colors duration-300
         `,
         className,

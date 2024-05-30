@@ -1,0 +1,53 @@
+{
+  "jobs": [
+    {
+      "id": 1,
+      "position": "Sr. Software Engineer",
+      "company": "Red Ventures",
+      "year_from": 2019,
+      "skills": ["React.js", "PHP", "Go", "Terraform", "AWS"]
+    },
+    {
+      "id": 2,
+      "position": "Software Engineer",
+      "company": "Red Ventures",
+      "year_from": 2017,
+      "year_to": 2019,
+      "skills": ["React.js", "Vue.js", "PHP", "Jest/Mocha", "Rest APIs"]
+    },
+    {
+      "id": 3,
+      "position": "Web Developer",
+      "company": "Netplus",
+      "year_from": 2016,
+      "year_to": 2017,
+      "skills": ["PHP", "Wordpress", "PHP", "SQL", "JavaScript"]
+    },
+    {
+      "id": 4,
+      "position": "Front End Developer",
+      "company": "Brownstein Group",
+      "year_from": 2015,
+      "year_to": 2015,
+      "type": "Short Term Contract",
+      "skills": []
+    },
+    {
+      "id": 5,
+      "position": "Software Engineer Intern",
+      "company": "Leadnomics",
+      "year_from": 2014,
+      "year_to": 2014,
+      "type": "Summer Internship",
+      "skills": ["PHP", "Relational Databases", "SQL", "Rest APIs"]
+    },
+    {
+      "id": 6,
+      "position": "Software Engineer",
+      "company": "Freelance",
+      "year_from": 2008,
+      "year_to": 2017,
+      "skills": ["PHP", "Relational Databases", "HTML", "CSS", "JavaScript"]
+    }
+  ]
+}

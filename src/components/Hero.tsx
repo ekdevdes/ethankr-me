@@ -44,7 +44,7 @@ const Hero: FC = () => {
       <div className="px-3 pt-6 md:pt-4 pb-4">
         <Button
           type="primary"
-          className="mb-4 md:mr-4 md:mb-0 lg:pr-10 relative group text-center md:text-left"
+          className="mb-4 md:mr-4 md:mb-0 lg:pr-10 relative group"
         >
           See My Experience
           <span
@@ -54,9 +54,7 @@ const Hero: FC = () => {
             &darr;
           </span>
         </Button>
-        <Button type="secondary" className="text-center md:text-left">
-          Checkout My Skills
-        </Button>
+        <Button type="secondary">Checkout My Skills</Button>
       </div>
     </div>
   )
