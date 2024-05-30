@@ -3,6 +3,7 @@ import has from 'lodash/has'
 import get from 'lodash/get'
 import cn from 'classnames'
 import { Job as JobType } from '../types/experience'
+import chunk from '../utils/chunk'
 
 import Button from '../components/shared/Button'
 
@@ -11,14 +12,16 @@ type JobProps = {
 }
 
 const Job: FC<JobProps> = ({ details }) => {
-  // Duties is optional so we'll default it to an empty array here
   const duties = get(details, 'duties', [])
+  const skills = get(details, 'skills', [])
 
-  // Some jobs have *alot* of duties, let's break them up to make it easier to read
-  const CHUNK_SIZE = 3
-  const chunkedDuties = [duties.slice(0, CHUNK_SIZE), duties.slice(CHUNK_SIZE)]
+  // Break jobs with alot of duties and skills into more manageable sizes
+  const chunkedDuties = chunk(duties, 3)
+  const chunkedSkills = chunk(skills, 15)
+  const shouldShowViewMoreButton =
+    chunkedDuties[1].length > 0 || chunkedSkills[1].length > 0
 
-  const [dutiesExpanded, setDutiesExpanded] = useState<boolean>(false)
+  const [expanded, setExpanded] = useState<boolean>(false)
 
   return (
     <div
@@ -55,7 +58,7 @@ const Job: FC<JobProps> = ({ details }) => {
         <ul
           className={cn(
             {
-              hidden: !dutiesExpanded,
+              hidden: !expanded,
             },
             'list-disc ml-4 mt-0',
           )}
@@ -68,17 +71,24 @@ const Job: FC<JobProps> = ({ details }) => {
         </ul>
       </div>
       <div className="mt-auto">
+        <p className="text-sm font-bold text-zinc-600 selection:bg-red-700 selection:text-white mb-3">
+          Skills:{' '}
+          <span className="font-normal">{chunkedSkills[0].join(', ')}</span>
+          {expanded && (
+            <span className="font-normal">, {chunkedSkills[1].join(', ')}</span>
+          )}
+        </p>
         {/* Only show the 'View More' button if there actually is more duties to show */}
-        {chunkedDuties[1].length > 0 && (
+        {shouldShowViewMoreButton ? (
           <Button
             type="tertiary"
             className="my-3 relative group"
             onClick={() => {
-              setDutiesExpanded(expanded => !expanded)
+              setExpanded(isExpanded => !isExpanded)
             }}
           >
-            {dutiesExpanded ? 'View Less' : 'View More'}{' '}
-            {dutiesExpanded ? (
+            {expanded ? 'View Less' : 'View More'}{' '}
+            {expanded ? (
               <span
                 aria-hidden="true"
                 className="ml-2 absolute top-0 transition-transform group-hover:-translate-y-2"
@@ -94,11 +104,12 @@ const Job: FC<JobProps> = ({ details }) => {
               </span>
             )}
           </Button>
+        ) : (
+          <>
+            {/* A spacer to align the skills evenly, not necessary on mobile since we stack the exp cards */}
+            <div className="md:p-8 lg:p-6"></div>
+          </>
         )}
-        <p className="text-sm font-bold text-zinc-600 selection:bg-red-700 selection:text-white mb-3">
-          Skills:{' '}
-          <span className="font-normal">{details.skills.join(', ')}</span>
-        </p>
       </div>
     </div>
   )

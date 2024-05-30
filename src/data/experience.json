@@ -5,13 +5,13 @@
       "position": "Sr. Software Engineer",
       "company": "Red Ventures",
       "year_from": 2019,
-      "skills": ["React.js", "PHP", "Go", "Terraform", "AWS", "React.js", "PHP", "Go", "Terraform", "AWS", "React.js", "PHP", "Go", "Terraform", "AWS", "React.js", "PHP", "Go", "Terraform", "AWS", "React.js", "PHP", "Go", "Terraform", "AWS", "React.js", "PHP", "Go", "Terraform", "AWS"],
+      "skills": ["Nx", "PHP", "Nuxt.js", "Fastly", "AWS Lambda", "Feature Flagging", "Amazon Web Services (AWS)", "Amazon EC2", "Vuex", "A/B Testing", "JavaScript", "Tailwind CSS", "Vue.js", "CSS Modules", "Node.js", "HTML5", "Swagger API Docs", "Relational Databases", "TypeScript", "WordPress", "Styled Components", "Next.js", "Blade", "New Relic", "Rollbar", "Terraform", "React.js", "Twig", "Git", "Redux.js", "GraphQL", "Github Actions", "Webpack", "Jest", "Storybook", "Storyblok", "NoSQL", "GitHub", "Lerna", "CircleCI", "PHPUnit", "Mocha", "SQL", "PostgreSQL", "MSSQL", "VictorOps", "Splunk On-Call", "REST APIs", "Laravel", "CSS3", "Redis", "Vite", "Cypress", "SCSS"],
       "duties": [
         "Collaborate with cross-functional teams including: Business Analysts, Product Management, SEO Analysts, Compliance and Project Management to translate high-level business requirements into actionable engineering tasks and detailed achievable goals in the development of a comprehensive product roadmap.",
         "Responsible for quickly and effectively communicating complex technical solutions either proactively or retrospectively as business need dictates, to non-technical stakeholders to ensure they are empowered to make informed decisions.",
         "Participate in the development of Junior, Associate and Mid-Level engineers via shadowing, one on ones to help them enhance their technical proficiency, documentation writing and improve their soft skills, including communication, leadership skills.",
         "Develop a wide variety of front-end web applications to meet the customer's needs. These applications range from larger monolithic systems to smaller, more customized, niche sites with backends that can be maintained by customer-employed Business Analysts, SEO Analysts and Compliance. Leveraging technologies such as React, Redux, TypeScript, Javascript, ES6, Vue, VueX, Next.js and Node.js ensuring high performance, scalability, accessibility, maintainability, observability and security using REST and GraphQL APIs.",
-        "Responsible for the creation of the infrastructure utilized by various APIs. Led discussions to ascertain clients needs to determine the most appropriate technology (e. g. Terraform or AWS CloudFormation) considering security, high availability, performance, caching, authorization, authentication, versioning, logging and alerting. Leveraging technologies such as Express.js, Node.js, JavaScript (ES6), PHP, Laravel, Apollo, Go, Redis, Elasticache, Lambda, S3, EC2, ECR, RDS, DynamoDB and CloudWatch. APIs included REST and GraphQL endpoints in order to interface with linked databases, serving as proxy wrappers and scraping various websites to facilitate front-end data retrieval."
+        "Responsible for the creation of the infrastructure utilized by various APIs. Led discussions to ascertain clients needs to determine the most appropriate technology (e.g. Terraform or AWS CloudFormation) considering security, high availability, performance, caching, authorization, authentication, versioning, logging and alerting. Leveraging technologies such as Express.js, Node.js, JavaScript (ES6), PHP, Laravel, Apollo, Go, Redis, Elasticache, Lambda, S3, EC2, ECR, RDS, DynamoDB and CloudWatch. APIs included REST and GraphQL endpoints in order to interface with linked databases, serving as proxy wrappers and scraping various websites to facilitate front-end data retrieval."
       ]
     },
     {
@@ -20,7 +20,7 @@
       "company": "Red Ventures",
       "year_from": 2017,
       "year_to": 2019,
-      "skills": ["React.js", "Vue.js", "PHP", "Jest/Mocha", "Rest APIs"],
+      "skills": ["PHP", "New Relic", "Nuxt.js", "Amazon Web Services (AWS)", "Vuex", "A/B Testing", "JavaScript", "Tailwind CSS", "Vue.js", "CSS Modules", "Node.js", "HTML5", "Swagger API Docs", "Relational Databases", "TypeScript", "WordPress", "Styled Components", "Next.js", "Blade", "React.js", "Twig", "Git", "Redux.js", "Webpack", "Jest", "Storybook", "Storyblok", "NoSQL", "GitHub", "PHPUnit", "Mocha", "SQL", "PostgreSQL", "MSSQL", "REST APIs", "Laravel", "CSS3", "SCSS"],
       "duties": [
         "Developed features for diverse websites, ranging from small healthcare marketing sites to large financial platforms. Leveraged technologies such as PHP, EJS, Hugo, HTML5, CSS3, SCSS, JS (ES6), Vue and VueX.",
         "Built React-based e-commerce carts with Redux and Webpack for a variety of industries such as internet, telecommunications and security for large Fortune 500 clients to mid-sized and smaller clients.",
@@ -34,7 +34,7 @@
       "company": "Netplus",
       "year_from": 2016,
       "year_to": 2017,
-      "skills": ["PHP", "Wordpress", "PHP", "SQL", "JavaScript"],
+      "skills": ["PHP", "JavaScript", "Node.js", "HTML5", "Relational Databases", "WordPress", "React.js", "Git", "Webpack", "GitHub", "PHPUnit", "SQL", "REST APIs", "CSS3", "SCSS"],
       "duties": [
         "Developed and maintained complex websites using a diverse technology stack, including Wordpress, PHP, HTML5, CSS3, JavaScript (ES6) and build tools like Gulp and Grunt. Keeping in mind performance, accessibility, responsivity and maintainability.",
         "Led both front-end and back-end development efforts, served as a Project Manager as business need dictated and championed the adoption of mobile-first web development practices across functional teams and clients."
@@ -47,7 +47,7 @@
       "year_from": 2015,
       "year_to": 2015,
       "type": "Short Term Contract",
-      "skills": [],
+      "skills": ["PHP", "JavaScript", "Node.js", "HTML5", "Relational Databases", "WordPress", "Git", "GitHub", "PHPUnit", "SQL", "PostgreSQL", "REST APIs", "CSS3", "SCSS"],
       "duties": [
         "Contributed to the development and maintenance of complex websites for a variety of clients, utilizing a diverse technology stack that included WordPress, PHP, HTML5, CSS3 and JavaScript (ES6).",
         "Collaborated closely with cross-functional teams, including Design, Copy and Project Management. Assessed existing website models and adjusted the designs to ensure the front-end adapted seamlessly to various devices."
@@ -60,7 +60,7 @@
       "year_from": 2014,
       "year_to": 2014,
       "type": "Summer Internship",
-      "skills": ["PHP", "Relational Databases", "SQL", "Rest APIs"]
+      "skills": ["PHP", "HTML5", "Relational Databases", "Git", "GitHub", "PHPUnit", "SQL", "REST APIs", "CSS3"]
     },
     {
       "id": 6,
@@ -68,7 +68,7 @@
       "company": "Freelance",
       "year_from": 2008,
       "year_to": 2017,
-      "skills": ["PHP", "Relational Databases", "HTML", "CSS", "JavaScript"],
+      "skills": ["PHP", "Vuex", "JavaScript", "Vue.js", "CSS Modules", "Node.js", "HTML5", "Relational Databases", "TypeScript", "WordPress", "Styled Components", "Next.js", "Git", "Webpack", "Jest", "NoSQL", "GitHub", "PHPUnit", "Mocha", "SQL", "PostgreSQL", "REST APIs", "CSS3", "SCSS"],
       "duties": [
         "Developed a variety of complex websites for clients using CodeIgniter, PHP, HTML5, CSS3 and JavaScript. Led end-to-end development, including database setup, REST API architecture, design and front-end implementation. Notably, created a custom CMS with features like commenting, replies and CRUD operations for posts.",
         "Designed and implemented an orphanage website system, allowing administrators to upload adoption-related information (including photos, videos, biographies and sibling details). Additionally, facilitated effective communication with clients, translating their needs into actionable business requirements and maintaining regular progress updates.",
