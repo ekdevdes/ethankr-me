@@ -74,7 +74,7 @@ const Job: FC<JobProps> = ({ details }) => {
         <p className="text-sm font-bold text-zinc-600 selection:bg-red-700 selection:text-white mb-3">
           Skills:{' '}
           <span className="font-normal">{chunkedSkills[0].join(', ')}</span>
-          {expanded && (
+          {expanded && chunkedSkills[1].length > 0 && (
             <span className="font-normal">, {chunkedSkills[1].join(', ')}</span>
           )}
         </p>
