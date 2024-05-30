@@ -10,4 +10,5 @@ export type Job = {
   year_to?: number
   type?: string
   skills: string[]
+  duties?: string[]
 }

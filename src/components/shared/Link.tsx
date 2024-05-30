@@ -4,16 +4,11 @@ import cn from 'classnames'
 type ButtonProps = {
   children: ReactElement | ReactNode
   type: 'primary' | 'secondary' | 'tertiary'
-  onClick?: () => void
+  href?: string
   className?: string
 }
 
-const Button: FC<ButtonProps> = ({
-  children,
-  type,
-  onClick,
-  className = '',
-}) => {
+const Button: FC<ButtonProps> = ({ children, type, href, className = '' }) => {
   const primaryStyles = `
     bg-red-600 hover:bg-red-700 focus:bg-red-700
     text-white font-bold
@@ -35,8 +30,8 @@ const Button: FC<ButtonProps> = ({
   `
 
   return (
-    <button
-      type="button"
+    <a
+      href={href}
       className={cn(
         {
           [primaryStyles]: type === 'primary',
@@ -51,10 +46,9 @@ const Button: FC<ButtonProps> = ({
         `,
         className,
       )}
-      onClick={onClick}
     >
       {children}
-    </button>
+    </a>
   )
 }
 

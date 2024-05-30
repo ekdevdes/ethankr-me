@@ -5,7 +5,14 @@
       "position": "Sr. Software Engineer",
       "company": "Red Ventures",
       "year_from": 2019,
-      "skills": ["React.js", "PHP", "Go", "Terraform", "AWS"]
+      "skills": ["React.js", "PHP", "Go", "Terraform", "AWS", "React.js", "PHP", "Go", "Terraform", "AWS", "React.js", "PHP", "Go", "Terraform", "AWS", "React.js", "PHP", "Go", "Terraform", "AWS", "React.js", "PHP", "Go", "Terraform", "AWS", "React.js", "PHP", "Go", "Terraform", "AWS"],
+      "duties": [
+        "Collaborate with cross-functional teams including: Business Analysts, Product Management, SEO Analysts, Compliance and Project Management to translate high-level business requirements into actionable engineering tasks and detailed achievable goals in the development of a comprehensive product roadmap.",
+        "Responsible for quickly and effectively communicating complex technical solutions either proactively or retrospectively as business need dictates, to non-technical stakeholders to ensure they are empowered to make informed decisions.",
+        "Participate in the development of Junior, Associate and Mid-Level engineers via shadowing, one on ones to help them enhance their technical proficiency, documentation writing and improve their soft skills, including communication, leadership skills.",
+        "Develop a wide variety of front-end web applications to meet the customer's needs. These applications range from larger monolithic systems to smaller, more customized, niche sites with backends that can be maintained by customer-employed Business Analysts, SEO Analysts and Compliance. Leveraging technologies such as React, Redux, TypeScript, Javascript, ES6, Vue, VueX, Next.js and Node.js ensuring high performance, scalability, accessibility, maintainability, observability and security using REST and GraphQL APIs.",
+        "Responsible for the creation of the infrastructure utilized by various APIs. Led discussions to ascertain clients needs to determine the most appropriate technology (e. g. Terraform or AWS CloudFormation) considering security, high availability, performance, caching, authorization, authentication, versioning, logging and alerting. Leveraging technologies such as Express.js, Node.js, JavaScript (ES6), PHP, Laravel, Apollo, Go, Redis, Elasticache, Lambda, S3, EC2, ECR, RDS, DynamoDB and CloudWatch. APIs included REST and GraphQL endpoints in order to interface with linked databases, serving as proxy wrappers and scraping various websites to facilitate front-end data retrieval."
+      ]
     },
     {
       "id": 2,
@@ -13,7 +20,13 @@
       "company": "Red Ventures",
       "year_from": 2017,
       "year_to": 2019,
-      "skills": ["React.js", "Vue.js", "PHP", "Jest/Mocha", "Rest APIs"]
+      "skills": ["React.js", "Vue.js", "PHP", "Jest/Mocha", "Rest APIs"],
+      "duties": [
+        "Developed features for diverse websites, ranging from small healthcare marketing sites to large financial platforms. Leveraged technologies such as PHP, EJS, Hugo, HTML5, CSS3, SCSS, JS (ES6), Vue and VueX.",
+        "Built React-based e-commerce carts with Redux and Webpack for a variety of industries such as internet, telecommunications and security for large Fortune 500 clients to mid-sized and smaller clients.",
+        "Achieved a 600% increase in client revenue by prioritizing performance, efficiency, maintainability, accessibility, responsivity and a mobile-first mindset.",
+        "Mentored and trained Junior and Associate engineers through in-person collaboration and code reviews. Emphasized not only how to implement technical solutions but also the underlying rationale. Encouraged clear communication and problem-solving skills via training sessions and via modeling expected behaviors."
+      ]
     },
     {
       "id": 3,
@@ -21,7 +34,11 @@
       "company": "Netplus",
       "year_from": 2016,
       "year_to": 2017,
-      "skills": ["PHP", "Wordpress", "PHP", "SQL", "JavaScript"]
+      "skills": ["PHP", "Wordpress", "PHP", "SQL", "JavaScript"],
+      "duties": [
+        "Developed and maintained complex websites using a diverse technology stack, including Wordpress, PHP, HTML5, CSS3, JavaScript (ES6) and build tools like Gulp and Grunt. Keeping in mind performance, accessibility, responsivity and maintainability.",
+        "Led both front-end and back-end development efforts, served as a Project Manager as business need dictated and championed the adoption of mobile-first web development practices across functional teams and clients."
+      ]
     },
     {
       "id": 4,
@@ -30,7 +47,11 @@
       "year_from": 2015,
       "year_to": 2015,
       "type": "Short Term Contract",
-      "skills": []
+      "skills": [],
+      "duties": [
+        "Contributed to the development and maintenance of complex websites for a variety of clients, utilizing a diverse technology stack that included WordPress, PHP, HTML5, CSS3 and JavaScript (ES6).",
+        "Collaborated closely with cross-functional teams, including Design, Copy and Project Management. Assessed existing website models and adjusted the designs to ensure the front-end adapted seamlessly to various devices."
+      ]
     },
     {
       "id": 5,
@@ -47,7 +68,12 @@
       "company": "Freelance",
       "year_from": 2008,
       "year_to": 2017,
-      "skills": ["PHP", "Relational Databases", "HTML", "CSS", "JavaScript"]
+      "skills": ["PHP", "Relational Databases", "HTML", "CSS", "JavaScript"],
+      "duties": [
+        "Developed a variety of complex websites for clients using CodeIgniter, PHP, HTML5, CSS3 and JavaScript. Led end-to-end development, including database setup, REST API architecture, design and front-end implementation. Notably, created a custom CMS with features like commenting, replies and CRUD operations for posts.",
+        "Designed and implemented an orphanage website system, allowing administrators to upload adoption-related information (including photos, videos, biographies and sibling details). Additionally, facilitated effective communication with clients, translating their needs into actionable business requirements and maintaining regular progress updates.",
+        "Designed and implemented a custom reporting system that consolidates data from Twitter, Facebook and the MailChimp API. This system offers valuable insights into a business’s online presence and leveraged technologies such as PHP, HTML, CSS and JavaScript."
+      ]
     }
   ]
 }

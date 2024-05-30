@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import Button from './shared/Button'
+import Link from './shared/Link'
 import profilePic from '../assets/me.jpg'
 
 const Hero: FC = () => {
@@ -42,7 +42,8 @@ const Hero: FC = () => {
         </p>
       </div>
       <div className="px-3 pt-6 md:pt-4 pb-4">
-        <Button
+        <Link
+          href="#experience"
           type="primary"
           className="mb-4 md:mr-4 md:mb-0 lg:pr-10 relative group"
         >
@@ -53,8 +54,10 @@ const Hero: FC = () => {
           >
             &darr;
           </span>
-        </Button>
-        <Button type="secondary">Checkout My Skills</Button>
+        </Link>
+        <Link href="#" type="secondary">
+          Checkout My Skills
+        </Link>
       </div>
     </div>
   )
