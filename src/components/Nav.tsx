@@ -2,7 +2,7 @@ import { FC } from 'react'
 
 const Nav: FC = () => {
   return (
-    <nav className="shadow rounded-full fixed bg-white right-5 lg:right-28 z-10 p-3 pr-1">
+    <nav className="shadow rounded-full fixed bg-white right-5 lg:right-28 xl:right-32 2xl:right-52 z-10 p-3 pr-1">
       <ul className="flex">
         <li className="mr-2">
           <a

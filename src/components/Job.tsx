@@ -68,7 +68,7 @@ const Job: FC<JobProps> = ({ details }) => {
         </ul>
       </div>
       <div className="mt-auto">
-        {/* Only show the 'View More' button if their actually is more duties to show */}
+        {/* Only show the 'View More' button if there actually is more duties to show */}
         {chunkedDuties[1].length > 0 && (
           <Button
             type="tertiary"
