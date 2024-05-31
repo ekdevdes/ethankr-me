@@ -14,7 +14,7 @@ const AddlDetail: FC<AddlDetailProps> = ({ title, details }) => {
       <p className="text-xl text-zinc-600 font-bold p-3 pb-0 selection:bg-red-700 selection:text-white mb-4">
         {title}
       </p>
-      <div className="ml-3 -mb-2">
+      <div className="ml-3">
         <Detail details={details} type="edu" />
       </div>
     </div>
