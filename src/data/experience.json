@@ -54,15 +54,6 @@
       ]
     },
     {
-      "id": 5,
-      "position": "Software Engineer Intern",
-      "company": "Leadnomics",
-      "year_from": 2014,
-      "year_to": 2014,
-      "type": "Summer Internship",
-      "skills": ["PHP", "PHPUnit", "Relational Databases", "SQL", "REST APIs", "Git", "GitHub", "HTML5", "CSS3"]
-    },
-    {
       "id": 6,
       "position": "Software Engineer",
       "company": "Freelance",
