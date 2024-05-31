@@ -20,7 +20,7 @@
       "company": "Red Ventures",
       "year_from": 2017,
       "year_to": 2019,
-      "skills": ["PHP", "New Relic", "Nuxt.js", "Amazon Web Services (AWS)", "Vuex", "A/B Testing", "JavaScript", "Tailwind CSS", "Vue.js", "CSS Modules", "Node.js", "HTML5", "Swagger API Docs", "Relational Databases", "TypeScript", "WordPress", "Styled Components", "Next.js", "Blade", "React.js", "Twig", "Git", "Redux.js", "Webpack", "Jest", "Storybook", "Storyblok", "NoSQL", "GitHub", "PHPUnit", "Mocha", "SQL", "PostgreSQL", "MSSQL", "REST APIs", "Laravel", "CSS3", "SCSS"],
+      "skills": ["PHP", "Amazon Web Services (AWS)", "Node.js", "TypeScript", "JavaScript", "React.js", "Next.js", "Jest", "Mocha", "Vue.js", "Tailwind CSS", "CSS Modules", "Styled Components", "Webpack", "Storybook", "Redux.js", "VueX", "Nuxt.js", "WordPress", "Twig", "Blade", "Relational Databases", "SQL", "MySQL", "PostgreSQL", "NoSQL", "New Relic", "Swagger API Docs", "A/B Testing", "Laravel", "PHPUnit", "REST APIs", "GitHub",  "Git", "Storyblok", "HTML5", "CSS3", "SCSS"],
       "duties": [
         "Developed features for diverse websites, ranging from small healthcare marketing sites to large financial platforms. Leveraged technologies such as PHP, EJS, Hugo, HTML5, CSS3, SCSS, JS (ES6), Vue and VueX.",
         "Built React-based e-commerce carts with Redux and Webpack for a variety of industries such as internet, telecommunications and security for large Fortune 500 clients to mid-sized and smaller clients.",
@@ -34,7 +34,7 @@
       "company": "Netplus",
       "year_from": 2016,
       "year_to": 2017,
-      "skills": ["PHP", "JavaScript", "Node.js", "HTML5", "Relational Databases", "WordPress", "React.js", "Git", "Webpack", "GitHub", "PHPUnit", "SQL", "REST APIs", "CSS3", "SCSS"],
+      "skills": ["PHP","WordPress", "PHPUnit", "Relational Databases", "SQL", "REST APIs",  "React.js", "Node.js", "JavaScript", "Webpack", "Git", "GitHub", "SCSS", "HTML5", "CSS3"],
       "duties": [
         "Developed and maintained complex websites using a diverse technology stack, including Wordpress, PHP, HTML5, CSS3, JavaScript (ES6) and build tools like Gulp and Grunt. Keeping in mind performance, accessibility, responsivity and maintainability.",
         "Led both front-end and back-end development efforts, served as a Project Manager as business need dictated and championed the adoption of mobile-first web development practices across functional teams and clients."
@@ -47,7 +47,7 @@
       "year_from": 2015,
       "year_to": 2015,
       "type": "Short Term Contract",
-      "skills": ["PHP", "JavaScript", "Node.js", "HTML5", "Relational Databases", "WordPress", "Git", "GitHub", "PHPUnit", "SQL", "PostgreSQL", "REST APIs", "CSS3", "SCSS"],
+      "skills": ["PHP", "WordPress", "PHPUnit", "Relational Databases", "SQL", "PostgreSQL", "REST APIs", "JavaScript", "Node.js", "Git", "GitHub",  "SCSS", "HTML5", "CSS3"],
       "duties": [
         "Contributed to the development and maintenance of complex websites for a variety of clients, utilizing a diverse technology stack that included WordPress, PHP, HTML5, CSS3 and JavaScript (ES6).",
         "Collaborated closely with cross-functional teams, including Design, Copy and Project Management. Assessed existing website models and adjusted the designs to ensure the front-end adapted seamlessly to various devices."
@@ -60,7 +60,7 @@
       "year_from": 2014,
       "year_to": 2014,
       "type": "Summer Internship",
-      "skills": ["PHP", "HTML5", "Relational Databases", "Git", "GitHub", "PHPUnit", "SQL", "REST APIs", "CSS3"]
+      "skills": ["PHP", "PHPUnit", "Relational Databases", "SQL", "REST APIs", "Git", "GitHub", "HTML5", "CSS3"]
     },
     {
       "id": 6,
@@ -68,7 +68,7 @@
       "company": "Freelance",
       "year_from": 2008,
       "year_to": 2017,
-      "skills": ["PHP", "Vuex", "JavaScript", "Vue.js", "CSS Modules", "Node.js", "HTML5", "Relational Databases", "TypeScript", "WordPress", "Styled Components", "Next.js", "Git", "Webpack", "Jest", "NoSQL", "GitHub", "PHPUnit", "Mocha", "SQL", "PostgreSQL", "REST APIs", "CSS3", "SCSS"],
+      "skills": [ "TypeScript", "JavaScript", "Node.js", "Next.js", "React.js", "Vue.js", "Vuex", "CSS Modules", "Styled Components",  "Webpack", "Jest", "Mocha", "SCSS", "HTML5", "CSS3", "PHP", "WordPress", "PHPUnit", "Relational Databases",  "SQL", "PostgreSQL", "NoSQL", "REST APIs", "Git", "GitHub"],
       "duties": [
         "Developed a variety of complex websites for clients using CodeIgniter, PHP, HTML5, CSS3 and JavaScript. Led end-to-end development, including database setup, REST API architecture, design and front-end implementation. Notably, created a custom CMS with features like commenting, replies and CRUD operations for posts.",
         "Designed and implemented an orphanage website system, allowing administrators to upload adoption-related information (including photos, videos, biographies and sibling details). Additionally, facilitated effective communication with clients, translating their needs into actionable business requirements and maintaining regular progress updates.",
