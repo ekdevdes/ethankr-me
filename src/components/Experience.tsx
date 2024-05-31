@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { Job as JobType } from '../types/experience'
 
-import Job from './Job'
+import Detail from './Detail'
 
 type ExpProps = {
   jobs: JobType[]
@@ -15,7 +15,7 @@ const Experience: FC<ExpProps> = ({ jobs }) => {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-4 px-3">
         {jobs.map(job => {
-          return <Job details={job} key={job.id} />
+          return <Detail details={job} key={job.id} />
         })}
       </div>
     </div>

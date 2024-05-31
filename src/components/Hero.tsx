@@ -55,7 +55,7 @@ const Hero: FC = () => {
             &darr;
           </span>
         </Link>
-        <Link href="#" type="secondary">
+        <Link href="#skills" type="secondary">
           Checkout My Skills
         </Link>
       </div>

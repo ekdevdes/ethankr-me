@@ -7,7 +7,7 @@ import Hero from './Hero'
 import Nav from './Nav'
 import Experience from './Experience'
 import Skills from './Skills'
-import Education from './Education'
+import AddlDetail from './AddlDetail'
 
 const App: FC = () => {
   const [exp, setExp] = useState<ExperienceType>()
@@ -21,9 +21,30 @@ const App: FC = () => {
       <Nav />
       <Hero />
       {!isEmpty(exp) && <Experience jobs={exp.jobs} />}
-      <div className="grid grid-cols-1 md:grid-cols-2 p-3">
+      <div className="grid grid-cols-1 lg:grid-cols-2 p-3">
         <Skills />
-        <Education />
+        <div>
+          <AddlDetail
+            title="Education"
+            details={{
+              id: 1,
+              position: 'B.S. – I.T.: Web and Mobile Technologies',
+              company: 'Liberty University',
+              year_from: 2016,
+              skills: [],
+            }}
+          />
+          <AddlDetail
+            title="Certifications"
+            details={{
+              id: 1,
+              position: 'HashiCorp Terraform: Certified Associate',
+              company: 'HashiCorp',
+              year_from: 2022,
+              skills: [],
+            }}
+          />
+        </div>
       </div>
     </div>
   )
