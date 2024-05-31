@@ -6,6 +6,8 @@ import expData from '../data/experience.json'
 import Hero from './Hero'
 import Nav from './Nav'
 import Experience from './Experience'
+import Skills from './Skills'
+import Education from './Education'
 
 const App: FC = () => {
   const [exp, setExp] = useState<ExperienceType>()
@@ -19,6 +21,10 @@ const App: FC = () => {
       <Nav />
       <Hero />
       {!isEmpty(exp) && <Experience jobs={exp.jobs} />}
+      <div className="grid grid-cols-1 md:grid-cols-2 p-3">
+        <Skills />
+        <Education />
+      </div>
     </div>
   )
 }
