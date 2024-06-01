@@ -15,7 +15,7 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
       </p>
       <div className="grid grid-cols-2 md:grid-cols-4">
         {skills.map(skill => (
-          <Skill name={skill.name} id={skill.id} />
+          <Skill name={skill.name} id={skill.id} key={skill.id} />
         ))}
       </div>
     </div>

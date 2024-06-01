@@ -1,7 +1,6 @@
 import { FC, useState, useEffect } from 'react'
-import isEmpty from 'lodash/isEmpty'
-import { Experience as ExperienceType } from '../types/experience'
-import { Skills as SkillsType } from '../types/skills'
+import { Job } from '../types/experience'
+import { Skill } from '../types/skills'
 import Icons from '../assets/icons.svg?react'
 
 import expData from '../data/experience.json'
@@ -14,21 +13,21 @@ import Skills from './Skills'
 import AddlDetail from './AddlDetail'
 
 const App: FC = () => {
-  const [exp, setExp] = useState<ExperienceType>()
-  const [skills, setSkills] = useState<SkillsType>()
+  const [jobs, setJobs] = useState<Job[]>()
+  const [skills, setSkills] = useState<Skill[]>()
 
   useEffect(() => {
-    setExp(expData)
-    setSkills(skillData)
+    setJobs(expData.jobs)
+    setSkills(skillData.skills)
   }, [])
 
   return (
     <div className="lg:container lg:mx-auto p-4 bg-white shadow-sm lg:shadow relative">
       <Nav />
       <Hero />
-      {!isEmpty(exp) && <Experience jobs={exp.jobs} />}
+      <Experience jobs={jobs || []} />
       <div className="grid grid-cols-1 lg:grid-cols-2 p-3">
-        <Skills skills={skills} />
+        <Skills skills={skills || []} />
         <div>
           <AddlDetail
             title="Education"
