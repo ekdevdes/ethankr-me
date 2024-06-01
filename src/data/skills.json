@@ -1,0 +1,108 @@
+{
+  "skills": [
+    {
+      "name": "React",
+      "id": "react"
+    },
+    {
+      "name": "Redux",
+      "id": "redux"
+    },
+    {
+      "name": "Vue",
+      "id": "vue"
+    },
+    {
+      "name": "Next.js",
+      "id": "next"
+    },
+    {
+      "name": "Nuxt.js",
+      "id": "nuxt"
+    },
+    {
+      "name": "Typescript",
+      "id": "typescript"
+    },
+    {
+      "name": "Javascript",
+      "id": "javascript"
+    },
+    {
+      "name": "Node.js",
+      "id": "node"
+    },
+    {
+      "name": "Vite",
+      "id": "vite"
+    },
+    {
+      "name": "Webpack",
+      "id": "webpack"
+    },
+    {
+      "name": "Jest",
+      "id": "jest"
+    },
+    {
+      "name": "Mocha",
+      "id": "mocha"
+    },
+    {
+      "name": "Cypress",
+      "id": "cypress"
+    },
+    {
+      "name": "SCSS",
+      "id": "scss"
+    },
+    {
+      "name": "Tailwind CSS",
+      "id": "tailwinds"
+    },
+    {
+      "name": "PHP",
+      "id": "php"
+    },
+    {
+      "name": "Wordpress",
+      "id": "wordpress"
+    },
+    {
+      "name": "Laravel",
+      "id": "laravel"
+    },
+    {
+      "name": "Go",
+      "id": "go"
+    },
+    {
+      "name": "PostgreSQL",
+      "id": "postgres"
+    },
+    {
+      "name": "MongoDB",
+      "id": "mongodb"
+    },
+    {
+      "name": "Terraform",
+      "id": "terraform"
+    },
+    {
+      "name": "AWS",
+      "id": "aws"
+    },
+    {
+      "name": "CircleCI",
+      "id": "circleci"
+    },
+    {
+      "name": "GraphQL",
+      "id": "graphql"
+    },
+    {
+      "name": "Swagger API Docs",
+      "id": "swagger"
+    }
+  ]
+}
