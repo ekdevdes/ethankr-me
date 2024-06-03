@@ -7,7 +7,6 @@ Repo for my personal website written with React.js 18 + TypeScript. Hosted on AW
 - Vite
 - Bun _(See https://bun.sh/ for more details, but can be _much_ faster than npm)_
 - Tailwind CSS
-  - Docs: https://tailwindcss.com/docs/installation
 - ESLint + Prettier for auto-formatting/linting
 
 Hosted with:
@@ -27,10 +26,23 @@ This project uses bun _(as mentioned above)_ for the speed improvements over npm
 brew tap oven-sh/bun
 ```
 
-Then install bun from the homebrew reppo:
+Then install bun from the homebrew repo:
 
 ```zsh
 brew install bun
+```
+
+## Installing Terraform
+This repo uses Terraform to manage AWS infrastructure as code. Before making any changes to the `.tf` files in the `infra` directory you'll need to install the `terraform` cli. To do that first you'll have to tap the homebrew repo with:
+
+```zsh
+brew tap hashicorp/tap
+```
+
+Then install it from the homebrew repo:
+
+```zsh
+brew install hashicorp/tap/terraform
 ```
 
 ## Installing Dependencies
@@ -48,3 +60,28 @@ Once you've installed Bun and the dependences from `package.json` then you can r
 ```
 bun run dev
 ```
+
+## Terraform Commands
+
+```zsh
+terraform init
+```
+If this is your first time working with terraform, run `cd infra` and then this command to pull down on all the necessary module/provider data
+
+```zsh
+terraform plan
+```
+Run this after making any changes to get a preview of the infrastructure changes that will take place. Read this plan output _carefully_.
+
+```zsh
+terraform apply
+```
+_After_ you've finished verifying that all infrastructure changes are planning _as expected_, then run this command. 
+
+> [!CAUTION]
+> After this command has been run, the _only thing_ that can _undo it_ is another PR, `terraform plan` and `terraform apply`. **Please keep this in mind if reverting the change is critical as it would likely take 20-30 minutes to do so.**
+
+## Docs Links
+
+- **Tailwind CSS**: https://tailwindcss.com/docs/installation
+- **Terraform**: https://registry.terraform.io/providers/hashicorp/aws/latest/docs
