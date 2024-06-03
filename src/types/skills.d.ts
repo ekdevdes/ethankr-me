@@ -4,7 +4,7 @@ export type Skills = {
 
 export type Skill = {
   name: string
-  id: IconType
+  id: IconType | string
 }
 
 export type IconType =

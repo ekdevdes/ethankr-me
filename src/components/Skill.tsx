@@ -5,7 +5,7 @@ import SvgIcon from './shared/SvgIcon'
 
 type SkillProps = {
   name: string
-  id: IconType
+  id: IconType | string
 }
 
 const Skill: FC<SkillProps> = ({ name, id }) => {

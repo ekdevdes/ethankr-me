@@ -17,8 +17,8 @@ const Detail: FC<DetailProps> = ({ details, type = 'exp' }) => {
   const skills = get(details, 'skills', [])
 
   // Break jobs with alot of duties and skills into more manageable sizes
-  const chunkedDuties = chunk(duties, 3)
-  const chunkedSkills = chunk(skills, 15)
+  const chunkedDuties = chunk<string>(duties, 3)
+  const chunkedSkills = chunk<string>(skills, 15)
   const shouldShowViewMoreButton =
     chunkedDuties[1].length > 0 || chunkedSkills[1].length > 0
 
@@ -50,20 +50,22 @@ const Detail: FC<DetailProps> = ({ details, type = 'exp' }) => {
         ))}
       </ul>
 
-      <ul
-        className={cn(
-          {
-            hidden: !expanded,
-          },
-          'list-disc ml-4 mt-0',
-        )}
-      >
-        {chunkedDuties[1].map((duty, i) => (
-          <li key={i} className="mb-3">
-            <p className="text-sm lg:text-base">{duty}</p>
-          </li>
-        ))}
-      </ul>
+      {expanded && (
+        <ul
+          className={cn(
+            {
+              hidden: !expanded,
+            },
+            'list-disc ml-4 mt-0',
+          )}
+        >
+          {chunkedDuties[1].map((duty, i) => (
+            <li key={i} className="mb-3">
+              <p className="text-sm lg:text-base">{duty}</p>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   )
 

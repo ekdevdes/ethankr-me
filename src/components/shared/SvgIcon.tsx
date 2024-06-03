@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { IconType } from '../../types/skills'
 
 type SvgIconProps = {
-  id: IconType
+  id: IconType | string
   viewBox?: string
   className?: string
 }
