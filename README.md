@@ -32,8 +32,38 @@ Then install bun from the homebrew repo:
 brew install bun
 ```
 
+## Installing the AWS CLI
+
+To run the `terraform` commands for any infrastructure changes you'll first have to install the AWS CLI. To do that, run the following command to install it with homebrew:
+
+```zsh
+brew install awscli
+```
+
+That should take a minutes, don't worry, that's normal.
+
+After it installs you can verify that it installed correctly by running:
+
+```zsh
+aws --version
+```
+
+If you get something like the below as the output then you know it installed correctly:
+
+```zsh
+aws-cli/2.16.0 Python/3.11.9 Darwin/23.5.0 source/x86_64
+```
+
+Next, we'll have to connect it to the AWS account used to manage the infrastructure. To do that run:
+
+```zsh
+aws configure
+```
+
+It'll ask you for the AWS Access Key, Secret Access Key, Default region and default output format. I put my default region as `us-east-1` and my default output format as `json`.
+
 ## Installing Terraform
-This repo uses Terraform to manage AWS infrastructure as code. Before making any changes to the `.tf` files in the `infra` directory you'll need to install the `terraform` cli. To do that first you'll have to tap the homebrew repo with:
+Once the AWS CLI is installed then we can install the `terraform` CLI, used to manage the infrastructure as code. To do that first you'll have to tap the homebrew repo with the following command first:
 
 ```zsh
 brew tap hashicorp/tap
