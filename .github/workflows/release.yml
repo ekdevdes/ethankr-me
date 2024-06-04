@@ -1,0 +1,46 @@
+name: 'Build and Deploy Site'
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: "Build Site and Upload to S3"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout Repo"
+        id: checkout-repo
+        uses: actions/checkout@v3.3.0
+      - name: "Setup & Install Bun"
+        id: setup-bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: 1.1.10
+      - name: "Cache Dependencies"
+        id: setup-cache
+        uses: actions/cache@v3.2.4
+        with:
+          path: ~/.bun
+          key: bun-deps-${{ hashFiles('**/bun.lockb') }}
+          restore-keys: bun-deps-
+      - name: "Install Dependencies"
+        id: setup-deps
+        run: |
+          bun install --frozen-lockfile
+      - name: "Lint Site"
+        id: lint-site
+        run: |
+          bun run lint
+      - name: "Build Site"
+        id: build-site
+        run: |
+          bun run build
+      - name: "Upload to S3"
+        id: upload-to-s3
+        run: |
+          aws s3 sync ./dist s3://ethankr.me
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
