@@ -13,3 +13,7 @@ resource "aws_route53_record" "site_www_sub_domain" {
     evaluate_target_health = false
   }
 }
+
+output "route53_name_servers" {
+  value = aws_route53_zone.site_dns_zone.name_servers
+}

@@ -1,14 +1,15 @@
-locals {
-  s3_origin_id   = "ethankr.me-origin"
-  s3_domain_name = "ethankr.me.s3-website-us-east-1.amazonaws.com"
-}
-
 resource "aws_cloudfront_distribution" "site_s3_cf_distro" {
+  depends_on = [
+    aws_acm_certificate.site_cert,
+  ]
+
   enabled = true
-  
+  aliases = ["www.ethankr.me"]
+  default_root_object = "index.html"
+
   origin {
-    origin_id                = local.s3_origin_id
-    domain_name              = local.s3_domain_name
+    origin_id                = "${aws_s3_bucket.site_bucket.id}-origin"
+    domain_name              = aws_s3_bucket.site_bucket.bucket_regional_domain_name
 
     custom_origin_config {
       http_port              = 80
@@ -19,7 +20,7 @@ resource "aws_cloudfront_distribution" "site_s3_cf_distro" {
   }
 
   default_cache_behavior {
-    target_origin_id = local.s3_origin_id
+    target_origin_id = "${aws_s3_bucket.site_bucket.id}-origin"
     allowed_methods  = ["GET", "HEAD", "OPTIONS"]
     cached_methods   = ["GET", "HEAD", "OPTIONS"]
 
@@ -44,8 +45,13 @@ resource "aws_cloudfront_distribution" "site_s3_cf_distro" {
   }
   
   viewer_certificate {
-    cloudfront_default_certificate = true
+    acm_certificate_arn = aws_acm_certificate.site_cert.arn
+    ssl_support_method = "sni-only"
   }
 
   price_class = "PriceClass_100"
+}
+
+output "cloudfront_url" {
+  value = aws_cloudfront_distribution.site_s3_cf_distro
 }
