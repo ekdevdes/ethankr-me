@@ -138,3 +138,6 @@ dist
 # terraform
 # Local .terraform directories
 **/.terraform/*
+infra/terraform.tfstate
+infra/terraform.tfstate.backup
+infra/plans/*

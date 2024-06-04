@@ -1,5 +1,5 @@
 resource "aws_s3_bucket_website_configuration" "bucket_website" {
-  bucket = aws_s3_bucket.primary_site_bucket
+  bucket = aws_s3_bucket.site_bucket.id
 
   index_document {
     suffix = "index.html"
