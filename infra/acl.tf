@@ -1,14 +1,14 @@
 # objects uploaded to th bucket change ownership to the bucket owner
-resource "aws_s3_bucket_ownership_controls" "bucket_ownership_controls" {
-  bucket = aws_s3_bucket.primary_site_bucket
+resource "aws_s3_bucket_ownership_controls" "site_bucket_ownership_controls" {
+  bucket = aws_s3_bucket.site_bucket.id
 
   rule {
     object_ownership = "BucketOwnerPreferred"
   }
 }
 
-resource "aws_s3_bucket_public_access_block" "bucket_public_access_block" {
-  bucket = aws_s3_bucket.primary_site_bucket
+resource "aws_s3_bucket_public_access_block" "site_bucket_public_access_block" {
+  bucket = aws_s3_bucket.site_bucket.id
 
   block_public_acls = false
   block_public_policy = false
@@ -18,15 +18,15 @@ resource "aws_s3_bucket_public_access_block" "bucket_public_access_block" {
 
 resource "aws_s3_bucket_acl" "bucket_acl" {
   depends_on = [
-    aws_s3_bucket_ownership_controls.bucket_ownership_controls, 
-    aws_s3_bucket_public_access_block.bucket_public_access_block
+    aws_s3_bucket_ownership_controls.site_bucket_ownership_controls, 
+    aws_s3_bucket_public_access_block.site_bucket_public_access_block
   ]
 
-  bucket = aws_s3_bucket.primary_site_bucket
+  bucket = aws_s3_bucket.site_bucket
   acl = "public-read"
 }
 
-data "aws_iam_policy_document" "bucket_iam_policy" {
+data "aws_iam_policy_document" "site_bucket_iam_policy" {
   statement {
     sid = "AllowPublicRead"
     effect = "Allow"
@@ -42,7 +42,7 @@ data "aws_iam_policy_document" "bucket_iam_policy" {
   }
 }
 
-resource "aws_s3_bucket_policy" "bucket_policy" {
-  bucket = aws_s3_bucket.primary_site_bucket
-  policy = aws_iam_policy_document.bucket_iam_policy.json
+resource "aws_s3_bucket_policy" "site_bucket_policy" {
+  bucket = aws_s3_bucket.site_bucket.id
+  policy = aws_iam_policy_document.site_bucket_iam_policy.json
 }
