@@ -5,7 +5,6 @@ resource "aws_cloudfront_origin_access_identity" "site_origin_access_identity" {
 resource "aws_cloudfront_distribution" "site_s3_cf_distro" {
   enabled             = true
   default_root_object = "index.html"
-  aliases             = ["ethankr.me", "www.ethankr.me"]
 
   default_cache_behavior {
     allowed_methods        = ["GET", "HEAD", "OPTIONS"]
