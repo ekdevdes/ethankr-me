@@ -1,8 +1,4 @@
 resource "aws_cloudfront_distribution" "site_s3_cf_distro" {
-  depends_on = [
-    aws_acm_certificate.site_cert,
-  ]
-
   enabled = true
   aliases = ["www.ethankr.me"]
   default_root_object = "index.html"
@@ -43,10 +39,9 @@ resource "aws_cloudfront_distribution" "site_s3_cf_distro" {
       restriction_type = "none"
     }
   }
-  
+
   viewer_certificate {
-    acm_certificate_arn = aws_acm_certificate.site_cert.arn
-    ssl_support_method = "sni-only"
+    cloudfront_default_certificate = true
   }
 
   price_class = "PriceClass_100"
