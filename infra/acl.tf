@@ -32,16 +32,22 @@ resource "aws_s3_bucket_acl" "site_logs_bucket_acl" {
 
 data "aws_iam_policy_document" "site_bucket_iam_policy" {
   statement {
-    sid = "AllowPublicRead"
-    effect = "Allow"
-    resources = [
-      "arn:aws:s3:::ethankr.me",
-      "arn:aws:s3:::ethankr.me/*"
-    ]
-    actions = ["S3:GetObject", "s3:PutObject"]
+    actions   = ["s3:GetObject"]
+    resources = ["${aws_s3_bucket.site_bucket.arn}/*"]
+
     principals {
-      type = "*"
-      identifiers = ["*"]
+      type        = "AWS"
+      identifiers = [aws_cloudfront_origin_access_identity.site_origin_access_identity.iam_arn]
+    }
+  }
+
+  statement {
+    actions   = ["s3:ListBucket"]
+    resources = [aws_s3_bucket.site_bucket.arn]
+
+    principals {
+      type        = "AWS"
+      identifiers = [aws_cloudfront_origin_access_identity.site_origin_access_identity.iam_arn]
     }
   }
 }
