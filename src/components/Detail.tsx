@@ -27,7 +27,7 @@ const Detail: FC<DetailProps> = ({ details, type = 'exp' }) => {
   // If we don't have a to date for job listings say "to Current" for edu listings don't show a to date
   const dates = has(details, 'year_to') ? (
     <>
-      &nbsp;to <span>{details.year_to}</span>
+      to <span>{details.year_to}</span>
     </>
   ) : (
     <>
@@ -102,7 +102,7 @@ const Detail: FC<DetailProps> = ({ details, type = 'exp' }) => {
       id="experience"
     >
       <p className="text-sm font-bold text-zinc-600 selection:bg-red-700 selection:text-white">
-        <span>{details.year_from}</span>
+        <span>{details.year_from}&nbsp;</span>
         {dates}
         <span className="mx-1">&middot;</span>
         <span>{details.company}</span>
