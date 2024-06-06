@@ -56,6 +56,22 @@ resource "aws_cloudfront_distribution" "site_s3_cf_distro" {
     ssl_support_method             = "sni-only"
   }
 
+  # Swallow 403 and 404 errors and mask them with a 200 and serve our compiled react app
+  # In a production app we'd also have configs for 5xx and other 4xx codes here likely using a Lambda@Edge to pass the status code to the react app for pretty error pages
+  custom_error_response {
+    error_code            = "403"
+    error_caching_min_ttl = 86400 # one day
+    response_code         = "200"
+    response_page_path    = "/index.html"
+  }
+
+  custom_error_response {
+    error_code            = "404"
+    error_caching_min_ttl = 86400 # one day
+    response_code         = "200"
+    response_page_path    = "/index.html"
+  }
+
   # Only use CDN servers in North America and Europe since our site won't be highly accessed from other locations
   price_class = "PriceClass_100"
 }
