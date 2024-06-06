@@ -1,18 +1,18 @@
 ### Setup the CloudFront distro serving the compile react app
 # Setup the origin access policy for the cloudfront distro
 resource "aws_cloudfront_origin_access_identity" "site_origin_access_identity" {
-  comment = "ethankr.me Origin Access Identity"
+  comment = "${var.domain_name} Origin Access Identity"
 }
 
 resource "aws_cloudfront_distribution" "site_s3_cf_distro" {
   enabled             = true
   default_root_object = "index.html"
-  aliases             = ["ethankr.me", "*.ethankr.me"] # This works because of the SSL cert we have from ACM listed below
+  aliases             = [var.domain_name, "*.${var.domain_name}"] # This works because of the SSL cert we have from ACM listed below
 
   # For now we'll only allow GET, HEAD and OPTIONS requests, we can combe back and modify this later if we want to allow more
   default_cache_behavior {
-    allowed_methods        = ["GET", "HEAD", "OPTIONS"]
-    cached_methods         = ["GET", "HEAD", "OPTIONS"]
+    allowed_methods        = var.allowed_methods_cloudfront
+    cached_methods         = var.allowed_methods_cloudfront
     target_origin_id       = "${aws_s3_bucket.site_bucket.bucket}-origin"
     viewer_protocol_policy = "redirect-to-https"
     compress               = true
@@ -58,13 +58,4 @@ resource "aws_cloudfront_distribution" "site_s3_cf_distro" {
 
   # Only use CDN servers in North America and Europe since our site won't be highly accessed from other locations
   price_class = "PriceClass_100"
-}
-
-# Output the final cloudfront url for informative purposes
-output "cloudfront_distro_id" {
-  value = aws_cloudfront_distribution.site_s3_cf_distro.id
-}
-
-output "cloudfront_url" {
-  value = aws_cloudfront_distribution.site_s3_cf_distro.domain_name
 }

@@ -1,12 +1,13 @@
 ### Create S3 buckets for compiled react app and the server logs
 # Compiled React app bucket
 resource "aws_s3_bucket" "site_bucket" {
-  bucket = "ethankr.me"
+  # Bucket is named the same thing as the domain
+  bucket = var.domain_name
 }
 
 # Server logs bucket
 resource "aws_s3_bucket" "site_logs_bucket" {
-  bucket = "logs-ethankr.me"
+  bucket = "logs-${var.domain_name}"
 }
 
 ### Setup Access Controls for compiled react app bucket
