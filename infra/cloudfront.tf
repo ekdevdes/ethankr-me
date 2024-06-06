@@ -5,6 +5,7 @@ resource "aws_cloudfront_origin_access_identity" "site_origin_access_identity" {
 resource "aws_cloudfront_distribution" "site_s3_cf_distro" {
   enabled             = true
   default_root_object = "index.html"
+  aliases             = ["ethankr.me", "*.ethankr.me"]
 
   default_cache_behavior {
     allowed_methods        = ["GET", "HEAD", "OPTIONS"]
@@ -13,9 +14,9 @@ resource "aws_cloudfront_distribution" "site_s3_cf_distro" {
     viewer_protocol_policy = "redirect-to-https"
     compress               = true
 
-    min_ttl                = 604800 # one week
-    default_ttl            = 1209600 # two weeks
-    max_ttl                = 2592000 # one month
+    min_ttl     = 604800  # one week
+    default_ttl = 1209600 # two weeks
+    max_ttl     = 2592000 # one month
 
     forwarded_values {
       query_string = true
@@ -42,7 +43,10 @@ resource "aws_cloudfront_distribution" "site_s3_cf_distro" {
   }
 
   viewer_certificate {
-    cloudfront_default_certificate = true
+    acm_certificate_arn            = aws_acm_certificate.site_ssl_cert.arn
+    cloudfront_default_certificate = false
+    minimum_protocol_version       = "TLSv1.2_2021"
+    ssl_support_method             = "sni-only"
   }
 
   price_class = "PriceClass_100"
