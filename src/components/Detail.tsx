@@ -24,7 +24,7 @@ const Detail: FC<DetailProps> = ({ details, type = 'exp' }) => {
 
   const [expanded, setExpanded] = useState<boolean>(false)
 
-  // If we don't have a to date for job listings say "to Current" for edu listings don't show a to date
+  // If we don't have a to date for job listings say "to Current", for edu listings don't show a to date
   const dates = has(details, 'year_to') ? (
     <>
       to <span>{details.year_to}</span>
@@ -96,6 +96,30 @@ const Detail: FC<DetailProps> = ({ details, type = 'exp' }) => {
     </Button>
   )
 
+  const skillSection = (
+    <div className="mt-auto">
+      {/* Only show the "Skills" section if we actually have any skills to show */}
+      {chunkedSkills[0].length > 0 && (
+        <p className="text-sm font-bold text-zinc-600 selection:bg-red-700 selection:text-white mb-3">
+          Skills:{' '}
+          <span className="font-normal">{chunkedSkills[0].join(', ')}</span>
+          {expanded && chunkedSkills[1].length > 0 && (
+            <span className="font-normal">, {chunkedSkills[1].join(', ')}</span>
+          )}
+        </p>
+      )}
+      {/* Only show the 'View More' button if there actually is more duties to show */}
+      {shouldShowViewMoreButton ? (
+        <>{viewMoreButton}</>
+      ) : (
+        <>
+          {/* A spacer to align the skills evenly, not necessary on mobile since we stack the exp cards */}
+          <div className="md:p-8 lg:p-6"></div>
+        </>
+      )}
+    </div>
+  )
+
   return (
     <div
       className="shadow rounded-lg md:mr-4 mb-6 p-4 flex flex-col"
@@ -112,28 +136,7 @@ const Detail: FC<DetailProps> = ({ details, type = 'exp' }) => {
         {details.position}
       </p>
       {type === 'exp' && <>{_duties}</>}
-      {type === 'exp' && (
-        <div className="mt-auto">
-          <p className="text-sm font-bold text-zinc-600 selection:bg-red-700 selection:text-white mb-3">
-            Skills:{' '}
-            <span className="font-normal">{chunkedSkills[0].join(', ')}</span>
-            {expanded && chunkedSkills[1].length > 0 && (
-              <span className="font-normal">
-                , {chunkedSkills[1].join(', ')}
-              </span>
-            )}
-          </p>
-          {/* Only show the 'View More' button if there actually is more duties to show */}
-          {shouldShowViewMoreButton ? (
-            <>{viewMoreButton}</>
-          ) : (
-            <>
-              {/* A spacer to align the skills evenly, not necessary on mobile since we stack the exp cards */}
-              <div className="md:p-8 lg:p-6"></div>
-            </>
-          )}
-        </div>
-      )}
+      {type === 'exp' && <>{skillSection}</>}
     </div>
   )
 }

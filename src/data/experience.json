@@ -3,8 +3,17 @@
     {
       "id": 1,
       "position": "Sr. Software Engineer",
+      "company": "LendingTree",
+      "year_from": 2024,
+      "skills": [],
+      "duties": []
+    },
+    {
+      "id": 2,
+      "position": "Sr. Software Engineer",
       "company": "Red Ventures",
       "year_from": 2019,
+      "year_to": 2024,
       "skills": ["React.js", "Redux.js", "Vue", "VueX", "TypeScript", "JavaScript", "Tailwind CSS", "CSS Modules", "Styled Components", "Feature Flagging", "Fastly", "Amazon Web Services (AWS)", "Terraform", "PHP", "Wordpress", "Next.js", "Nuxt.js", "Node.js", "Vite", "Webpack", "Storybook", "Storyblok",  "Launch Darkly", "A/B Testing", "Laravel", "PHPUnit", "Blade", "Twig", "REST APIs", "GraphQL", "New Relic", "Rollbar", "Jest", "Mocha", "Cypress", "HTML5", "CSS3", "SCSS", "Github Actions", "CircleCI", "Swagger API Docs", "Relational Databases", "SQL", "PostgreSQL", "MSSQL", "NoSQL", "Swagger API Docs", "Relational Databases", "Git", "GitHub", "Nx", "Lerna", "VictorOps", "Splunk On-Call", "Redis"],
       "duties": [
         "Collaborate with cross-functional teams including: Business Analysts, Product Management, SEO Analysts, Compliance and Project Management to translate high-level business requirements into actionable engineering tasks and detailed achievable goals in the development of a comprehensive product roadmap.",
@@ -15,7 +24,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 3,
       "position": "Software Engineer",
       "company": "Red Ventures",
       "year_from": 2017,
@@ -29,7 +38,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 4,
       "position": "Web Developer",
       "company": "Netplus",
       "year_from": 2016,
@@ -41,7 +50,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 5,
       "position": "Front End Developer",
       "company": "Brownstein Group",
       "year_from": 2015,
